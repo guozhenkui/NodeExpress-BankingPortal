@@ -46,6 +46,6 @@ app.post('/payment', (req, res) => {
   const accountsJSON  = JSON.stringify(accounts, null, 4);
   fs.writeFileSync(path.join(__dirname , 'json/accounts.json'), accountsJSON , 'utf-8');
   res.render('payment', { message: "Payment Successful", account: accounts.credit });
-};
+});
 
 app.listen(3000, () => console.log('PS Project Running on port 3000!'));
