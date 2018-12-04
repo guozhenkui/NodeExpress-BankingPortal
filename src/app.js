@@ -18,7 +18,7 @@ app.get('/', (req, res) => { res.render('index', { title: 'Account Summary', acc
 
 app.get('/profile', (req, res) => { res.render('profile', { user: users[0] });});
 
-const accountRoutes = require('./routes/account');
+const accountRoutes = require('./routes/accounts');
 const servicesRoutes = require('./routes/services');
 
 app.use('/account', accountRoutes );
